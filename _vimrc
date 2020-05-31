@@ -8,8 +8,10 @@ syntax on
 set clipboard+=unnamed
 set showcmd
 
-" easily make debug
-nnoremap <space>d ^d$aprint("<c-r>"", <c-r>") # debug
+" easily make debug(for python)
+" nnoremap <space>d ^d$aprint("<c-r>"", <c-r>") # debug
+" easily make debug(for PHP)
+nnoremap <space>d ^d$aecho '<c-r>" ', debug_print(<c-r>"); # debug
 " cnore = command mode, co^ = comment out ci^ = comment in
 cnoremap co^ g:^\s\+[^#]\+# debug:normal I#<space>
 cnoremap ci^ g:^\s\+#.\+# debug:normal ^xx
