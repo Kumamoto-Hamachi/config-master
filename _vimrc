@@ -8,7 +8,9 @@ syntax on
 set clipboard+=unnamed
 set showcmd
 
-" easily make debug
+" easily make debug(for php)
+"nnoremap <space>d ^d$aprint_r('<c-r>" ' . <c-r>" . "\n"); # debug
+" easily make debug(for python)
 nnoremap <space>d ^d$aprint("<c-r>"", <c-r>") # debug
 " cnore = command mode, co^ = comment out ci^ = comment in
 cnoremap co^ g:^\s\+[^#]\+# debug:normal I#<space>
@@ -28,3 +30,7 @@ inoremap jj  <esc>
 
 " I don't understand the following sentence.
 source $VIMRUNTIME/macros/matchit.vim
+
+"for c++
+set exrc
+set secure
