@@ -1,3 +1,4 @@
+echo "bash_profile stands up"
 # make terminal like vi
 set -o vi
 
