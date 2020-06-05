@@ -1,0 +1,28 @@
+[color]
+	ui = auto
+[alias]
+	br = branch
+	co = checkout
+	cb = checkout -b
+	sh = stash
+	sl = stash list
+	sp = stash pop
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	lga = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	st = status
+[user]
+	name = Kumamoto
+	email = onioni9999nagare@gmail.com
+[core]
+	excludesfile = /Users/kumamoto/.gitignore_global
+	editor = vim
+[push]
+	default = current
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/kumamoto/.stCommitMsg
