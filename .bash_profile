@@ -15,3 +15,5 @@ alias ls="ls -G"
 
 #for coloring the front part of the termianl and show shortcut version
 export PS1="\[\e[38;5;45m\][\u \W]\$ \[\e[m\]"
+
+alias brew="env PATH=${PATH/\/Users\/$USER\/\.pyenv\/shims:/} brew"
