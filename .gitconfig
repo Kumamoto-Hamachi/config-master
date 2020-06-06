@@ -27,3 +27,5 @@
 	trustExitCode = true
 [commit]
 	template = /Users/kumamoto/.stCommitMsg
+[merge]
+	ff = false
