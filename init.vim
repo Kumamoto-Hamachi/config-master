@@ -3,6 +3,7 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc
 
+
 "" assingn <Space> Leader
 let mapleader =" "
 "" open new file
