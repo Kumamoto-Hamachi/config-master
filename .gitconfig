@@ -27,8 +27,3 @@
 	trustExitCode = true
 [merge]
 	ff = false
-[commit]
-	template = /Users/kumamoto/.stCommitMsg
-#for environment that is pulled from github, fix the [commit] template
-[includeIf "gitdir:~/config-master/"]
-	path = ~/.gitconfig-work
