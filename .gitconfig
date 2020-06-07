@@ -16,7 +16,7 @@
 	email = onioni9999nagare@gmail.com
 [core]
 	excludesfile = /Users/kumamoto/.gitignore_global
-	editor = vim
+	editor = nvim
 [push]
 	default = current
 [difftool "sourcetree"]

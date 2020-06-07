@@ -1,4 +1,6 @@
 set number
+set title
+set list
 set hlsearch
 set tabstop=4
 set shiftwidth=4
