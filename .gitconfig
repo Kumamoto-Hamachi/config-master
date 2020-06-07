@@ -25,7 +25,10 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-[commit]
-	template = /Users/kumamoto/.stCommitMsg
 [merge]
 	ff = false
+[commit]
+	template = /Users/kumamoto/.stCommitMsg
+#for environment that is pulled from github, fix the [commit] template
+[includeIf "gitdir:~/config-master/"]
+	path = ~/.gitconfig-work

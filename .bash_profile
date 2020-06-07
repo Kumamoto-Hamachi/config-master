@@ -21,7 +21,10 @@ export PS1="\[\e[38;5;45m\][\u \W]\$ \[\e[m\]"
 
 alias brew="env PATH=${PATH/\/Users\/$USER\/\.pyenv\/shims:/} brew"
 
-#for git-completion
+#for bash-completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
+
+#for brew install
+export PATH="/usr/local/sbin:$PATH"
