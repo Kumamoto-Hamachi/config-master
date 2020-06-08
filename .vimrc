@@ -38,3 +38,47 @@ map <C-n> :NERDTreeToggle<CR>
 "for c++
 set exrc
 set secure
+
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=/Users/kumamoto/.cache/dein/repos/github.com/Shougo/dein.vim
+
+" Required:
+if dein#load_state('/Users/kumamoto/.cache/dein')
+  call dein#begin('/Users/kumamoto/.cache/dein')
+
+  " 管理するプラグインを記述したファイル
+  let s:rc = '~/.config/nvim/rc'
+  let s:toml = s:rc . '/dein.toml'
+  let s:lazy_toml = s:rc . '/dein_lazy.toml'
+  call dein#load_toml(s:toml, {'lazy': 0})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
+
+  " Let dein manage dein
+  " Required:
+  call dein#add('/Users/kumamoto/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+  " Add or remove your plugins here like this:
+  "call dein#add('Shougo/neosnippet.vim')
+  "call dein#add('Shougo/neosnippet-snippets')
+
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+"if dein#chec_install()
+"  call dein#install()
+"endif
+
+"End dein Scripts-------------------------
+"
