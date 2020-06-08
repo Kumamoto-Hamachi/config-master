@@ -32,6 +32,9 @@ inoremap jj  <esc>
 " I don't understand the following sentence.
 source $VIMRUNTIME/macros/matchit.vim
 
+" for The NERD Tree
+map <C-n> :NERDTreeToggle<CR>
+
 "for c++
 set exrc
 set secure
