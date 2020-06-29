@@ -19,7 +19,7 @@ cnoremap ci^ g:^\s\+#.\+# debug:normal ^xx
 " adjust indent
 nnoremap <buffer> == ^v$hyddko<c-r>0<esc>
 " execute
-nnoremap <space>f :wa \| !echo -e '\e[38;5;0m\e[48;5;51m --- exec ---  \e[m';./exec.sh<cr>
+nnoremap <space>e :wa \| !echo -e '\e[38;5;0m\e[48;5;51m --- exec ---  \e[m';./exec.sh<cr>
 inoremap <c-g> <left>
 hi Pmenu ctermbg=255
 hi PmenuSel ctermbg=22 ctermfg=white
