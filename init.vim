@@ -9,8 +9,8 @@ let mapleader =" "
 "" open new file
 "" nnoremap <Leader>o :CtrlP<CR>
 "" save/close&save file ASAP
-nnoremap <Leader>ww :w<CR>
-nnoremap <Leader>wq :wq<CR>
+""nnoremap <Leader>ww :w<CR>
+""nnoremap <Leader>wq :wq<CR>
 "" copy & paste to clipboard
 vmap <Leader>y  "+y
 "" easily move to Visual mode
