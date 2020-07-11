@@ -9,6 +9,7 @@ filetype plugin indent on
 syntax on
 set clipboard+=unnamed
 set showcmd
+set nowrap
 
 " easily make debug(for python)
 " nnoremap <space>d ^d$aprint("<c-r>"", <c-r>") # debug
@@ -39,6 +40,10 @@ map <C-n> :NERDTreeToggle<CR>
 set exrc
 set secure
 
+"easy save
+nnoremap <Space>ww :w<CR>
+nnoremap <Space>wq :wq<CR>
+
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
@@ -49,14 +54,10 @@ set runtimepath+=/Users/kumamoto/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
 if dein#load_state('/Users/kumamoto/.cache/dein')
-  call dein#begin('/Users/kumamoto/.cache/dein')
+  " XDG base direcory compartible
+  let g:dein#cache_directory = $HOME . '/.cache/dein'
 
-  " 管理するプラグインを記述したファイル
-  let s:rc = '~/.config/nvim/rc'
-  let s:toml = s:rc . '/dein.toml'
-  let s:lazy_toml = s:rc . '/dein_lazy.toml'
-  call dein#load_toml(s:toml, {'lazy': 0})
-  call dein#load_toml(s:lazy_toml, {'lazy': 1})
+  call dein#begin('/Users/kumamoto/.cache/dein')
 
   " Let dein manage dein
   " Required:
@@ -65,6 +66,16 @@ if dein#load_state('/Users/kumamoto/.cache/dein')
   " Add or remove your plugins here like this:
   "call dein#add('Shougo/neosnippet.vim')
   "call dein#add('Shougo/neosnippet-snippets')
+
+  "---tomlのための記述ここから---
+  " 管理するプラグインを記述したファイル
+  let s:toml_dir = '~/.config/nvim/rc'
+  let s:toml = s:toml_dir . '/dein.toml'
+  let s:lazy_toml = s:toml_dir . '/dein_lazy.toml'
+  " tomlファイルをキャッシュしておく
+  call dein#load_toml(s:toml, {'lazy': 0})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
+  "---tomlのための記述ここまで---
 
   " Required:
   call dein#end()
@@ -76,9 +87,10 @@ filetype plugin indent on
 syntax enable
 
 " If you want to install not installed plugins on startup.
-"if dein#chec_install()
-"  call dein#install()
-"endif
+if dein#check_install()
+  call dein#install()
+endif
+call map(dein#check_clean(), "delete(v:val, 'rf')")
 
 "End dein Scripts-------------------------
-"
+"参考:https://ashnoa.hatenablog.com/entry/2019/10/16/230202
