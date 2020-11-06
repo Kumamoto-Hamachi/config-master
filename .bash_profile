@@ -31,3 +31,13 @@ export PATH="/usr/local/sbin:$PATH"
 
 #for nvim to open shortly
 alias vi="nvim"
+
+#for docker command completion
+ if [ -f $(brew --prefix)/etc/bash_completion ]; then
+ . $(brew --prefix)/etc/bash_completion
+ fi
+
+# load .bash_rc
+if [ -f ~/.bashrc ]; then
+source ~/.bashrc
+fi
