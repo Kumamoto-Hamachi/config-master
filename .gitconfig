@@ -27,3 +27,5 @@
 	trustExitCode = true
 [merge]
 	ff = false
+[pull]
+	rebase = merges
