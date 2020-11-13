@@ -12,7 +12,7 @@ set showcmd
 set nowrap
 
 " easily make debug(for python)
-" nnoremap <space>d ^d$aprint("<c-r>"", <c-r>") # debug
+nnoremap <space>d ^d$aprint("<c-r>"", <c-r>")  # debug
 " easily make debug(for PHP)
 " cnore = command mode, co^ = comment out ci^ = comment in
 cnoremap co^ g:^\s\+[^#]\+# debug:normal I#<space>
