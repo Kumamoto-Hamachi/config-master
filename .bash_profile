@@ -1,4 +1,4 @@
-echo "bash_profile stands up"
+echo ".bash_profile stands up"
 # make terminal like vi
 set -o vi
 
@@ -29,8 +29,6 @@ fi
 #for brew install
 export PATH="/usr/local/sbin:$PATH"
 
-#for nvim to open shortly
-alias vi="nvim"
 
 #for docker command completion
  if [ -f $(brew --prefix)/etc/bash_completion ]; then
