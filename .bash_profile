@@ -10,6 +10,8 @@ eval "$(pyenv init -)"
 #for PHP
 #export PATH="/usr/local/opt/php@7.3/bin:$PATH"
 #export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
+# for Node.js installed by nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 #I have to migrate the following sentence to .zshrc to study later.
 #for coloring names of directories and files
@@ -18,6 +20,8 @@ alias ls="ls -G"
 
 #for coloring the front part of the termianl and show shortcut version
 export PS1="\[\e[38;5;45m\][\u \W]\$ \[\e[m\]"
+#export PS1="\[\033[1m\]\[\033[31m\](#\\\`-´)\[\033[0m\]\[\033[0m\]< \[\033[32m\]\w\[\033[0m\] $ "
+#export PS1="\[\033[31m\](*'-')\[\033[0m\]< \[\033[32m\]\w\[\033[0m\] $"
 
 alias brew="env PATH=${PATH/\/Users\/$USER\/\.pyenv\/shims:/} brew"
 
