@@ -39,6 +39,11 @@ export PATH="/usr/local/sbin:$PATH"
  . $(brew --prefix)/etc/bash_completion
  fi
 
+# load easy_pw
+if [ -f ~/.easy_pw.sh ]; then
+source ~/easy_pw.sh
+fi
+
 # load .bash_rc
 if [ -f ~/.bashrc ]; then
 source ~/.bashrc

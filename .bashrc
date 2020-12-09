@@ -13,8 +13,8 @@ alias fo="./exec.sh"
 # easy shutdown
 alias shut_now="sudo shutdown -h now"
 # easy mycli
-alias mycli_k="mycli -ukumamoto -p3211"
-alias mycli_r="mycli -uroot -p3211"
+alias mycli_k="mycli -ukumamoto -p"$LOCAL_PW
+alias mycli_r="mycli -uroot -p"$LOCAL_PW
 # command history conf
 HISTSIZE=1000000
 HISTFILESIZE=1000000
