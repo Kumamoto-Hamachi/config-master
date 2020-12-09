@@ -7,8 +7,14 @@ alias lsalf="ls -alF"
 alias rm='rm -i'
 #for nvim to open shortly
 alias vi="nvim"
+# easy exec
 alias ho="chmod 755 exec.sh"
 alias fo="./exec.sh"
+# easy shutdown
+alias shut_now="sudo shutdown -h now"
+# easy mycli
+alias mycli_k="mycli -ukumamoto -p3211"
+alias mycli_r="mycli -uroot -p3211"
 # command history conf
 HISTSIZE=1000000
 HISTFILESIZE=1000000
