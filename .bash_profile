@@ -40,7 +40,7 @@ export PATH="/usr/local/sbin:$PATH"
  fi
 
 # load easy_pw
-if [ -f ~/.easy_pw.sh ]; then
+if [ -f ~/easy_pw.sh ]; then
 source ~/easy_pw.sh
 fi
 
