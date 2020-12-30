@@ -21,6 +21,9 @@ HISTFILESIZE=1000000
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+alias man='env LANG=C man'
+alias jman='env LANG=ja_JP.UTF-8 man'
+
 # for rupa/z-cmd instead of cd-cmd
 . /Users/kumamoto/z/z.sh
 
