@@ -1,5 +1,6 @@
 echo ".bashrc stands up"
 export LSCOLORS=gxfxcxdxbxegexabagacad
+alias al="alias"
 alias ls="ls -G"
 alias lsalf="ls -alF"
 #alias mv='mv -b --suffix=_$(date +%Y%m%d).bk'
@@ -8,7 +9,16 @@ alias rm='rm -i'
 #for nvim to open shortly
 alias vi="nvim"
 # easy exec
-alias ho="chmod 755 exec.sh"
+function ho(){
+	if [ -e "exec.sh" ] ; then
+		echo "chmod 755 exec.sh"
+		chmod 755 exec.sh
+	fi
+	if [ -e "tidy.sh" ] ; then
+		echo "chmod 755 tidy.sh"
+		chmod 755 exec.sh
+	fi
+}
 alias fo="./exec.sh"
 # easy shutdown
 alias shut_now="sudo shutdown -h now"
