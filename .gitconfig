@@ -31,3 +31,5 @@
 	ff = false
 [pull]
 	rebase = merges
+[fetch]
+	prune = true
