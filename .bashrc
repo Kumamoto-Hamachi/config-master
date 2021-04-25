@@ -3,6 +3,8 @@ export LSCOLORS=gxfxcxdxbxegexabagacad
 alias al="alias"
 alias ls="ls -G"
 alias lsalf="ls -alF"
+alias f8="flake8"
+alias cl="clear"
 #alias mv='mv -b --suffix=_$(date +%Y%m%d).bk'
 #alias cp='cp -b --suffix=_$(date +%Y%m%d).bk'
 alias rm='rm -i'
@@ -50,3 +52,9 @@ if [ -e ~/easy_path.sh ]; then
 	source ~/easy_path.sh
 fi
 
+# for docker
+alias aliasd="alias | grep docker"
+alias do="docker"
+alias doc="docker container"
+alias doi="docker image"
+alias dos="docker search"
