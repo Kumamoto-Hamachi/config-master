@@ -21,12 +21,18 @@ function ho(){
 		chmod 755 exec.sh
 	fi
 }
+# for python prepare
 alias fo="./exec.sh"
+alias four_python="echo 'fifi' && cp -r ~/four/python/* ./"
+alias four_pythond="echo 'doradora' && cp -r ~/four/python ./"
+eval "$(pyenv init -)"
+
 # easy shutdown
 alias shut_now="sudo shutdown -h now"
 # easy mycli
 alias mycli_k="mycli -ukumamoto -p"$LOCAL_PW
 alias mycli_r="mycli -uroot -p"$LOCAL_PW
+
 # command history conf
 HISTSIZE=1000000
 HISTFILESIZE=1000000
