@@ -36,6 +36,9 @@ export PATH="/usr/local/sbin:$PATH"
 
 
 #for docker command completion
+# if [ -f $(brew --prefix)/etc/bash_completion ]; then
+# . $(brew --prefix)/etc/bash_completion
+# fi
 
 # load easy_pw
 if [ -f ~/easy_pw.sh ]; then
