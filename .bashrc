@@ -64,6 +64,7 @@ if [ -e ~/mariadb.sh ]; then
 	source ~/mariadb.sh
 fi
 
+alias vi="nvim"
 
 # edit & reflect bash & bashrc
 alias eb="vi ~/.bashrc"
@@ -73,6 +74,8 @@ alias sbp="source ~/.bash_profile"
 # edit vimrc
 alias ev="vi ~/.vimrc"
 
+# for git
+alias st="git status"
 
 # for docker
 alias da="alias | grep docker"
