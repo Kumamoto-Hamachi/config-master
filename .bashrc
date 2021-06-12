@@ -59,8 +59,8 @@ if [ -e ~/easy_path.sh ]; then
 fi
 
 # for docker
-alias aliasd="alias | grep docker"
-alias do="docker"
+alias da="alias | grep docker"
 alias doc="docker container"
 alias doi="docker image"
 alias dos="docker search"
+
