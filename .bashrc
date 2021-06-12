@@ -76,6 +76,7 @@ alias ev="vi ~/.vimrc"
 
 # for git
 alias st="git status"
+alias br="git branch"
 
 # for docker
 alias da="alias | grep docker"
