@@ -3,6 +3,7 @@ export LSCOLORS=gxfxcxdxbxegexabagacad
 alias al="alias"
 alias ls="ls -G"
 alias lsalf="ls -alF"
+alias ll="ls -lh"
 alias f8="flake8"
 alias cl="clear"
 #alias mv='mv -b --suffix=_$(date +%Y%m%d).bk'
@@ -57,6 +58,16 @@ fi
 if [ -e ~/easy_path.sh ]; then
 	source ~/easy_path.sh
 fi
+
+
+# edit & reflect bash & bashrc
+alias eb="vi ~/.bashrc"
+alias sb="source ~/.bashrc"
+alias ebp="vi ~/.bash_profile"
+alias sbp="source ~/.bash_profile"
+# edit vimrc
+alias ev="vi ~/.vimrc"
+
 
 # for docker
 alias da="alias | grep docker"
