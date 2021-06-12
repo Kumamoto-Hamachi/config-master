@@ -4,9 +4,10 @@ set -o vi
 
 
 #for python
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH" 
-eval "$(pyenv init -)"
+if [ -f ~/.profile ]; then
+source ~/.profile
+fi
+
 #for PHP
 #export PATH="/usr/local/opt/php@7.3/bin:$PATH"
 #export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
@@ -35,16 +36,8 @@ export PATH="/usr/local/sbin:$PATH"
 
 
 #for docker command completion
- if [ -f $(brew --prefix)/etc/bash_completion ]; then
- . $(brew --prefix)/etc/bash_completion
- fi
 
 # load easy_pw
 if [ -f ~/easy_pw.sh ]; then
 source ~/easy_pw.sh
-fi
-
-# load .bash_rc
-if [ -f ~/.bashrc ]; then
-source ~/.bashrc
 fi
