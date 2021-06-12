@@ -9,17 +9,21 @@ filetype plugin indent on
 syntax on
 set clipboard+=unnamed
 set showcmd
-set nowrap
+set wrap
 
 " easily make debug(for python)
 nnoremap <space>d ^d$aprint("<c-r>"", <c-r>")  # debug
+" easily pickle
+inoremap pl^ obj = pickle.load(open(fname, "rb"))
+inoremap pd^ pickle.dump(obj, open(fname, "wb"))
 " easily make debug(for PHP)
 " cnore = command mode, co^ = comment out ci^ = comment in
-cnoremap co^ g:^\s\+[^#]\+# debug:normal I#<space>
-cnoremap ci^ g:^\s\+#.\+# debug:normal ^xx
+cnoremap co^ g:^\s\+[^#]\+# debug:normal I#
+cnoremap ci^ g:^\s\+#.\+# debug:normal ^x
 " adjust indent
 nnoremap <buffer> == ^v$hyddko<c-r>0<esc>
 " execute
+"nnoremap <space>e :wa \| !echo -e '\e[38;5;0m\e[48;5;51m --- exec ---  \e[m';./exec.sh<cr>
 nnoremap <space>e :wa \| !echo -e '\e[38;5;0m\e[48;5;51m --- exec ---  \e[m';./exec.sh<cr>
 inoremap <c-g> <left>
 hi Pmenu ctermbg=255
@@ -43,6 +47,7 @@ set secure
 "easy save
 nnoremap <Space>ww :w<CR>
 nnoremap <Space>wq :wq<CR>
+
 
 "dein Scripts-----------------------------
 if &compatible
@@ -94,3 +99,5 @@ call map(dein#check_clean(), "delete(v:val, 'rf')")
 
 "End dein Scripts-------------------------
 "参考:https://ashnoa.hatenablog.com/entry/2019/10/16/230202
+"TODO:vim開いてる時にこれ見れるようにしたい
+"insert modeのコマンドは^終了
