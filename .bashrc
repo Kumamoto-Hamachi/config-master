@@ -8,8 +8,8 @@ alias cl="clear"
 #alias mv='mv -b --suffix=_$(date +%Y%m%d).bk'
 #alias cp='cp -b --suffix=_$(date +%Y%m%d).bk'
 alias rm='rm -i'
-#for nvim to open shortly
-alias vi="nvim"
+alias pp='pwd | pbcopy'
+
 # easy exec
 function ho(){
 	if [ -e "exec.sh" ] ; then
