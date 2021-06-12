@@ -59,6 +59,11 @@ if [ -e ~/easy_path.sh ]; then
 	source ~/easy_path.sh
 fi
 
+# load mariadb.sh
+if [ -e ~/mariadb.sh ]; then
+	source ~/mariadb.sh
+fi
+
 
 # edit & reflect bash & bashrc
 alias eb="vi ~/.bashrc"
