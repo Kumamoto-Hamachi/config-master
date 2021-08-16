@@ -11,11 +11,16 @@ set clipboard+=unnamed
 set showcmd
 set wrap
 
+" すべて選択(TODO)
+nnoremap <C-c> ggVG
+vnoremap <C-c> ggVG
+
 " easily make debug(for python)
 nnoremap <space>d ^d$aprint("<c-r>"", <c-r>")  # debug
 " easily pickle
 inoremap pl^ obj = pickle.load(open(fname, "rb"))
 inoremap pd^ pickle.dump(obj, open(fname, "wb"))
+"TODO クズだからまだfo^もらってない, enumerateをmapする書き方考えろ
 " easily make debug(for PHP)
 " cnore = command mode, co^ = comment out ci^ = comment in
 cnoremap co^ g:^\s\+[^#]\+# debug:normal I#
