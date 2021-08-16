@@ -27,6 +27,9 @@ alias fo="./exec.sh"
 alias four_python="echo 'fifi' && cp -r ~/four/python/* ./"
 alias four_pythond="echo 'doradora' && cp -r ~/four/python ./"
 eval "$(pyenv init -)"
+alias mp="cp -n /Users/kumamoto/Documents/atcoder_pr/generic_set/main.py ."
+alias mpv="mp && vi main.py"
+
 
 # easy shutdown
 alias shut_now="sudo shutdown -h now"
